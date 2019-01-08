@@ -1,0 +1,117 @@
+/* form styles */
+.div-tables {
+  display: table;         
+  width: auto;         
+  background-color: #eee;         
+  border: 1px solid #666666;         
+  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+.div-table-rows {
+  display: table-row;
+  width: auto;
+  clear: both;
+}
+.div-table-cols {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 400px;         
+   
+}
+.div-table-menus
+{
+	display:talbe-column;
+	float:left;
+	width:400px;
+	background-color: #ccc;
+	font-weight:bold;
+	font-size:16pt;
+	height:40px;
+}
+#wrapper {
+width: 80%;
+height: 800px;
+margin: 50px auto;
+display: flex;
+}
+.center {
+width: 50%;
+height: 100%;
+margin: auto;
+}
+form .row {
+  display: block;
+  padding: 7px 8px;
+  margin-bottom: 7px;
+}
+form .row:hover {
+  background: #f1f7fa;
+}
+ 
+form label {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  width: 150px;
+  padding: 6px 0;
+  color: #464646;
+  vertical-align: top;
+}
+form .req { color: #ca5354; }
+ 
+form .note {
+  font-size: 1.2em;
+  line-height: 1.33em;
+  font-weight: normal;
+  padding: 2px 7px;
+  margin-bottom: 10px;
+}
+
+form input:focus, form textarea:focus { outline: none; }
+ 
+/* placeholder styles: http://stackoverflow.com/a/2610741/477958 */
+::-webkit-input-placeholder { color: #aaafbd; font-style: italic; } /* WebKit */
+:-moz-placeholder { color: #aaafbd; font-style: italic; }           /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder { color: #aaafbd; font-style: italic; }          /* Mozilla Firefox 19+ */
+:-ms-input-placeholder { color: #aaafbd; font-style: italic; }      /* Internet Explorer 10+ */
+
+
+#submitbtn {
+  height: 40px;
+  width: 155px;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Oxygen', Arial, sans-serif;
+  font-size: 2.0em;
+  color: #0a528f;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.65);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #317bd6 #3784e3 #2d74d5 #3774e3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #4581e5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6faefd), to(#4581e5));
+  background-image: -webkit-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -moz-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -ms-linear-gradient(top, #6faefd, #4581e5);
+  background-image: -o-linear-gradient(top, #6faefd, #4581e5);
+  background-image: linear-gradient(top, #6faefd, #4581e5);
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+#submitbtn:hover, #submitbtn:focus {
+  -webkit-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+  -moz-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9);
+}
+ 
+#submitbtn:active {
+  -webkit-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+  -moz-box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+  box-shadow: 0 0 15px rgba(70, 100, 200, 0.9), 0 1px 3px rgba(0,0,0,0.4) inset;
+}

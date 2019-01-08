@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+    <table-filter match-schema="public" match-name="sec_authorities"/>
+    <table-filter match-schema="public" match-name="sec_users"/>
+    <table-filter match-schema="public" match-name="sec_user_authorities"/>
+
+    <table schema="public" name="sec_users">
+        <meta attribute="extra-import">java.util.stream.Collectors</meta>
+        <meta attribute="extra-import">java.util.List</meta>
+        <meta attribute="extra-import">javax.persistence.Transient</meta>
+        <meta attribute="class-code">
+        <![CDATA[
+    @Transient
+    public List<SecAuthority> getSecAuthorities() {
+        return getSecUserAuthorities().stream().map(e -> e.getSecAuthority()).collect(Collectors.toList());
+    }
+
+        ]]>
+        </meta>
+        <primary-key>
+            <generator class="identity"></generator>
+        </primary-key>
+    </table>
+
+    <table schema="public" name="sec_authorities">
+        <meta attribute="class-description">
+            Javadoc for the Person class
+            @author eugen
+        </meta>
+        <primary-key>
+            <generator class="identity"></generator>
+        </primary-key>
+    </table>
+
+    <table schema="public" name="sec_user_authorities">
+        <primary-key>
+            <generator class="identity"></generator>
+        </primary-key>
+    </table>
+
+</hibernate-reverse-engineering>
